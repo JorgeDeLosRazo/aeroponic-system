@@ -23,7 +23,7 @@ display.setTextColor(SSD1306_WHITE); // Draw white text
 display.setCursor(0, 32);     // Start at top-left corner is (0,0). Note: format is in (x,y)
 display.cp437(true);
 
-display.println("Hello World!");
+display.println("Gas ppm will display here");
 display.display();
 delay(20000);
 }
