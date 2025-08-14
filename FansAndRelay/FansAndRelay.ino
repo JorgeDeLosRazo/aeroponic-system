@@ -1,3 +1,12 @@
+/*
+  CODE AUTHOR: Claudia Becerril Hernandez
+  DATE: 8/14/25
+  WHAT CODE DOES: The code turns the cooling fans on and off. Every five seconds the fans turn on of rfive senconds.
+
+*/
+
+
+
 
 // constants won't change
 const int RELAY_PIN = 26;  // the Arduino pin, which connects to the IN pin of relay

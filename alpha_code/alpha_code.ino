@@ -1,3 +1,14 @@
+/*
+  CODE AUTHOR: Jorge De Los Santos Razo, Claudia Becerril Hernandez
+  Date: 8/14/25
+  WHAT CODE DOES: It combiines the code for the MQ137, and cooling fans and displays when the status of the fans (whether they're ON or OFF) 
+  and the ammonia reading percentage
+
+
+*/
+
+
+
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Wire.h>
@@ -18,8 +29,10 @@ void DisplayAmmoniaPercentage();
 float AmmoniaPercentage();
 void FansAndRelay();
 
+
 unsigned long lastToggleTime = 0;
 bool relay_on = false;
+
 
 void setup() {
   Serial.begin(115200);
@@ -40,7 +53,7 @@ void loop() {
 float AmmoniaPercentage(){
   float raw_analog_value = analogRead(A3);
   float ammonia_percentage = (raw_analog_value / (float)ADC_RES) * 100.0;
-  return ammonia_percentage;
+  return ammonia_percentage-21;
 }
 
 void DisplayAmmoniaPercentage(){
@@ -67,7 +80,9 @@ void DisplayAmmoniaPercentage(){
   display.println("Plasma     : OFF");
 
   display.setCursor(0,35);
+  display.println("Mister     : ON");
   display.println("Mister     : OFF");
+
 
   display.display();
   delay(100);
@@ -83,3 +98,4 @@ void FansAndRelay(){
   }
 
 }
+
