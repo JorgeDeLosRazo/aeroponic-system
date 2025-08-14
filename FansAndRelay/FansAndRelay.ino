@@ -1,7 +1,7 @@
 /*
   CODE AUTHOR: Claudia Becerril Hernandez
   DATE: 8/14/25
-  WHAT CODE DOES: The code turns the cooling fans on and off. Every five seconds the fans turn on of rfive senconds.
+  WHAT CODE DOES: The code turns the cooling fans on and off. Every five seconds the fans turn on for five senconds.
 
 */
 
